@@ -365,3 +365,4 @@ function isFuture(date) {
     // date.setHours(hour);
     return date >= today;
 }
+

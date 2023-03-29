@@ -85,6 +85,14 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+.container > .header > .today:hover { 
+  background-color: #0062cc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
 .container > .header > .last-week, .container > .header .next-week {
   font-size: 18px;
   color: #999;
@@ -95,7 +103,7 @@
 }
 .container > .header > .time {
   font-size: 18px;
-  color: #999;
+  color: #cd1010;
 }
 .container > .table-calendar {
   width: 100%;
@@ -112,8 +120,15 @@
   margin-bottom: 15px;
   width: 10%;
 }
+
+.container > .table-calendar > .header > .item:hover {
+  background-color: red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
 .container > .table-calendar > .header > .item {
-  background-color: lightseagreen;
+  background-color: rgb(32, 178, 176);
 }
 .container > .table-calendar > .header > .item > span {
   font-size: 14px;
