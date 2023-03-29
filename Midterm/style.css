@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  background-color: lightpink;
+  border-radius: 10px;
+  padding: 30px 50px;
+  margin-left: -100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  gap: 15px;
+  width: 400px;
+}
+.modal > .row {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  background-color: light;
+  gap: 5px;
+}
+.modal > .row > h1 {
+  font-size: 30px;
+}
+.modal > .row > label {
+  font-size: 18px;
+  color: #444;
+}
+.modal > .row > span {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+.modal > .row > input, .modal > .row textarea {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  outline: 0;
+}
+.modal > .row > button {
+  padding: 5px 10px;
+  border: none;
+  outline: 0;
+  background-color: #444;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.modal > .row > button#save {
+  background-color: green;
+}
+.modal > .row > button#save:hover {
+  background-color: blue;
+}
+.modal > .row > button#cancel {
+  background-color: red;
+}
+.modal > .row > button#cancel:hover {
+  background-color: brown;
+}
+
+.container {
+  width: 90%;
+  margin: 50px auto;
+}
+.container > .header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 30px;
+  gap: 20px;
+}
+.container > .header > .today {
+  font-size: 14px;
+  color: #999;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container > .header > .last-week, .container > .header .next-week {
+  font-size: 18px;
+  color: #999;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container > .header > .time {
+  font-size: 18px;
+  color: #999;
+}
+.container > .table-calendar {
+  width: 100%;
+}
+.container > .table-calendar > .header {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.container > .table-calendar > .header > .item {
+  color: yellow;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 15px;
+  width: 10%;
+}
+.container > .table-calendar > .header > .item {
+  background-color: lightseagreen;
+}
+.container > .table-calendar > .header > .item > span {
+  font-size: 14px;
+}
+.container > .table-calendar > .header > .item > p {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.container > .table-calendar > .header > .item:first-child {
+  width: 70px;
+}
+.container > .table-calendar > .header > .item > label {
+  font-size: 20px; 
+  background-color: red;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
+.container > .table-calendar > .header > .future > p, .container > .table-calendar > .header > .future span {
+  color: yellow;
+}
+.container > .table-calendar > .header > .future > label {
+  background-color: red;
+}
+.container > .table-calendar > #table-show {
+  height: 55vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: block;
+  margin-top: 15px;
+}
+.container > .table-calendar > #table-show > .row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.container > .table-calendar > #table-show > .row > .col {
+  padding: 5px 10px;
+  border: 10px solid #ddd;
+  border-left: 10px;
+  border-bottom: 10px;
+  min-height: 70px;
+  cursor: pointer;
+  padding: 5px;
+  padding-bottom: 20px;
+  width: 13.5%;
+  display: flex;
+  gap: 5px;
+  flex-flow: column;
+}
+
+#table-show > .row div:hover:not(.col:first-child){
+  background-color: lightgrey;
+}
+
+.container > .table-calendar > #table-show > .row > .col:first-child {
+  font-size: 16px;
+  color: green;
+  border: none;
+  border-right: 10px solid #ddd;
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+}
+.container > .table-calendar > #table-show > .row > .col > .item {
+  padding: 2px 5px;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.container > .table-calendar > #table-show > .row > .col > .item > span {
+  width: 100%;
+}
+.container > .table-calendar > #table-show > .row > .col > .item > p {
+  position: absolute;
+  border: 1px solid #999;
+  color: #999;
+  border-radius: 50%;
+  padding: 1px 5px;
+  font-size: 12px;
+  right: 5px;
+  z-index: 1;
+  background-color: green;
+  display: none;
+}
+.container > .table-calendar > #table-show > .row > .col > .item:hover > p {
+  display: block;
+}
+
